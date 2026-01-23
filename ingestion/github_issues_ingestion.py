@@ -48,7 +48,7 @@ def load_to_bigquery(df):
         df,
         table_ref,
         job_config=bigquery.LoadJobConfig(
-            write_disposition="WRITE_APPEND"
+            write_disposition="WRITE_TRUNCATE"
         )
     )
 
