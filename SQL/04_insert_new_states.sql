@@ -4,7 +4,7 @@ INSERT INTO `project-e0c626dd-6b61-4b52-a57.analytics.issue_status_history`
 SELECT
   s.issue_id,
   s.state,
-  s.ingestion_date AS valid_from,
+  CAST(s.ingestion_date AS TIMESTAMP) AS valid_from,
   NULL AS valid_to,
   TRUE AS is_current
 FROM (
