@@ -116,6 +116,10 @@ Permite reconstruir el **historial completo de cambios de estado** de cada issue
 
 El dashboard final permite un análisis completo del estado y calidad del proceso de resolución de issues.
 
+
+![Dashboard preview](images/pwbi.png)
+
+
 ### KPIs principales
 - **Total de Issues**
 - **Issues Open vs Closed**
