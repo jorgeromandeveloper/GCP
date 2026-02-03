@@ -1,7 +1,8 @@
-from datetime import datetime
 import requests
 import pandas as pd
 from google.cloud import bigquery
+from datetime import datetime, timezone
+
 
 PROJECT_ID = "project-e0c626dd-6b61-4b52-a57"
 DATASET_ID = "raw_data"
@@ -34,7 +35,7 @@ def transform_issues(issues):
             "closed_at": issue["closed_at"],
             "author": issue["user"]["login"],
             "repo": f"{REPO_OWNER}/{REPO_NAME}",
-            "ingestion_date": datetime.utcnow()
+            "ingestion_date": datetime.now(timezone.utc)
         })
 
     return pd.DataFrame(rows)
